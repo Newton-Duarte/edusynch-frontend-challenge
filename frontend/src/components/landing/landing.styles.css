@@ -1,0 +1,422 @@
+/* Container */
+
+.landing__container {
+  width: 100vw;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 28px;
+}
+
+.header__images {
+  display: flex;
+  align-items: center;
+  margin-right: 8rem;
+}
+
+.header__images button {
+  display: none;
+  margin-right: 20px;
+}
+
+.header__images img:first-child {
+  height: 12px;
+}
+
+.header__nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header__nav button {
+  z-index: 1;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.menu__item {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.menu__item + .menu__item {
+  margin-left: 4.7rem;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+  .landing__container {
+    padding: 0 24px;
+  }
+
+  .header {
+    padding-top: 24px;
+  }
+
+  .header__images {
+    margin-right: 0;
+  }
+
+  .header__images button {
+    display: block;
+  }
+
+  .header__images img:nth-child(2) {
+    height: 18px
+  }
+
+  .header__nav {
+    display: none;
+  }
+}
+
+/* Main */
+
+.main {
+  display: flex;
+  margin-top: 14.3rem;
+}
+
+.main img {
+  margin-left: -155px;
+}
+
+.main__content {
+  position: relative;
+  color: #fff;
+  width: 100%;
+  max-width: 601px;
+  margin-top: 37px;
+}
+
+.main__content h1 {
+  font: 400 4.8rem Poppins;
+  line-height: 57px;
+  margin-bottom: 60px;
+}
+
+.main__content h1 > span {
+  text-transform: uppercase;
+  color: #FFEAA4;
+  font-weight: 700;
+}
+
+.main__content img {
+  position: absolute;
+  top: -250px;
+  right: -180px;
+}
+
+.main__content p {
+  line-height: 30px;
+  max-width: 496px;
+}
+
+.main__images {
+  position: relative;
+  margin-right: 4.3rem;
+}
+
+.main__images img:nth-child(2) {
+  position: absolute;
+  top: 57%;
+  left: 95%;
+  z-index: 5;
+}
+
+.main__images img:nth-child(3) {
+  position: absolute;
+  top: 65%;
+  left: 130%;
+}
+
+.main__form {
+  margin-top: 60px;
+}
+
+.main__form__row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main__form__column {
+  flex: 1;
+}
+
+.main__form__search-container {
+  text-align: right;
+  z-index: 1;
+}
+
+.checkmark {
+  position: absolute;
+  left: 10%;
+  height: 18px;
+  width: 18px;
+  background-color: rgba(255, 255, 255, .2);
+  border-radius: 50%;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+
+.checked {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+}
+
+.main__form label {
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 4.3rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  background: transparent;
+  background-color: rgba(102, 60, 223, 1);
+  width: 162px;
+  height: 56px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.main__form label:hover > .checked {
+  background-color: rgba(255, 255, 255, .1);
+  border: 1px solid white;
+  z-index: 1;
+}
+
+.main__form label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.main__form label:hover input ~ .checkmark {
+  background-color: #B68300;
+}
+.main__form label input:checked ~ .checkmark {
+  background-color: var(--color-secundary);
+}
+
+.checkmark:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 9px;
+  background-color: #B68300;
+  left: 9px;
+  top: 4px;
+  display: none;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 2px;
+  background-color: #B68300;
+  left: 6px;
+  top: 11px;
+  display: none;
+}
+
+.main__form label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.main__form label input:checked ~ .checkmark:before {
+  display: block;
+}
+
+input[type="radio"]:checked + .checked {
+  background-color: rgba(255, 255, 255, .1);
+  border: 1px inset white;
+}
+
+.main__form label + label {
+  margin-left: 20px;
+}
+
+/* Modal Login */
+
+.modal__close {
+  border-radius: 50%;
+  border: none;
+  width: 51px;
+  height: 51px;
+  background: var(--color-background);
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.modal__login__title h2 {
+  font: 400 3.4rem Poppins;
+  line-height: 45px;
+  margin-bottom: 47px;
+}
+
+.modal__login__title h2 > span {
+  text-transform: uppercase;
+  color: #FFEAA4;
+  font-size: 3.8rem;
+  font-weight: 700;
+}
+
+.modal__login__action__container {
+  text-align: right;
+}
+
+/* Modal Menu */
+
+.modal-menu > .modal > .modal__container {
+  background: var(--color-background);
+}
+
+.modal-menu__images img {
+  height: 18px;
+}
+
+.modal-menu__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: calc(100vh - 71px);
+}
+
+.modal-menu__menu__item {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 21px;
+}
+
+.modal-menu__menu__item + .modal-menu__menu__item {
+  margin: 15px auto 59px auto;
+}
+
+.modal-menu__nav button {
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+  
+  .main img {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .main__images {
+    order: 2;
+    margin-right: 0;
+  }
+  
+  .main__images img:nth-child(2),
+  .main__images img:nth-child(3) {
+    display: none;
+  }
+
+  .main__content {
+    margin-top: 0;
+  }
+
+  .main__content h1 {
+    font-size: 2.9rem;
+    line-height: 37.92px;
+    letter-spacing: -1.68px;
+  }
+  
+  .main__content h1 > span {
+    font-size: 3.3rem;
+    letter-spacing: -0.64px;
+  }
+
+  .main__content p {
+    display: none;
+  }
+
+  .main__content img {
+    display: none;
+  }
+
+  .main__form__column {
+    flex-basis: 100%;
+  }
+  .main__form__search-container {
+    text-align: left;
+    margin-top: 16px;
+  }
+
+  .main__form__search-container button {
+    width: 100%;
+    height: 48px;
+    font-size: 14px;
+    margin-bottom: 60px;
+    color: #744FF4;
+  }
+
+  .main__form__action-container {
+    justify-content: space-between;
+  }
+
+  .main__form label {
+    width: 130px;
+    height: 48px;
+    font-size: 1rem;
+  }
+
+  .main__form label + label {
+    margin-left: 0;
+  }
+
+  /* Modal Login */
+
+  .modal__close {
+    background: transparent;
+    width: 24px;
+    height: 24px;
+    top: 24px;
+    right: 24px;
+  }
+
+  .modal__login__action__container button {
+    width: 100%;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,131 @@
+<!-- <header-component></header-component> -->
+<div class="landing__container">
+  <header class="header">
+    <div class="header__images">
+      <button
+        class="button--icon"
+        ng-click="$ctrl.openModalMenu()"
+      >
+        <img src="../../assets/img/hamburger.png" alt="Hamburguer menu">
+      </button>
+      <img src="../../assets/img/logo.svg" alt="Eduick">
+    </div>
+    <nav class="header__nav">
+      <ul class="menu">
+        <a href="#" class="menu__item">
+          <li>How it Works</li>
+        </a>
+        <a href="#" class="menu__item">
+          <li>About Us</li>
+        </a>
+      </ul>
+      <button
+        class="button"
+        ng-click="$ctrl.openModalLogin()"
+      >Get Started</button>
+    </nav>
+  </header>
+  <modal-component ng-if="$ctrl.modalMenu" class="modal-menu">
+    <div class="modal-menu__images">
+      <img src="../../assets/img/logo.svg" alt="Eduick">
+    </div>
+    <nav class="modal-menu__nav">
+      <ul class="modal-menu__menu">
+        <a href="#" class="modal-menu__menu__item">
+          <li>How it Works</li>
+        </a>
+        <a href="#" class="modal-menu__menu__item">
+          <li>About Us</li>
+        </a>
+      </ul>
+      <button
+        class="button"
+        ng-click="$ctrl.openModalLogin()"
+      >Get Started</button>
+    </nav>
+    <button
+      class="modal__close"
+      ng-click="$ctrl.closeModalMenu()"
+    >
+      <img src="../../assets/img/close_big.png" alt="Close icon">
+    </button>
+  </modal-component>
+  <modal-component ng-if="$ctrl.modalLogin">
+    <button
+      class="modal__close"
+      ng-click="$ctrl.closeModalLogin()"
+    >
+      <img src="../../assets/img/close_big.png" alt="Close icon">
+    </button>
+    <div class="modal__login__title">
+      <h2>Get Started <br><span>just login</span></h2>
+    </div>
+    <form
+      class="modal__login__form"
+      ng-submit="$ctrl.handleLogin()"
+    >
+      <input-component
+        label="'Username:'"
+        on-change="$ctrl.changeUsername()"
+        field-value="$ctrl.username"
+      ></input-component>
+      <input-component
+        label="'Password:'"
+        type="'password'"
+        on-change="$ctrl.changePassword()"
+        field-value="$ctrl.password"
+      ></input-component>
+      <div class="modal__login__action__container">
+        <button
+          type="submit"
+          class="button button--small button--uppercase"
+        >Login</button>
+      </div>
+    </form>
+  </modal-component>
+  <main class="main">
+    <div class="main__images">
+      <img src="../../assets/img/image-and-details.png" alt="Image and details">
+      <img src="../../assets/img/shape.png" alt="Detail">
+      <img src="../../assets/img/detail2.png" alt="Detail">
+    </div>
+    <div class="main__content">
+      <h1>Find your <br><span>best teacher</span></h1>
+      <p>Whether you are a student trying to find your ideal private language teachers/tutors or a teacher trying to find great students for your customised private lessons!</p>
+      <form class="main__form">
+        <input-component
+          placeholder="'Type here what are you looking for'"
+        ></input-component>
+        <div class="main__form__row main__form__action-container">
+          <label for="teacher">I'M A TEACHER
+            <input
+              name="role"
+              type="radio"
+              id="teacher"
+              ng-model="$ctrl.role"
+              value="teacher"
+            />
+            <div class="checked"></div>
+            <span class="checkmark"></span>
+          </label>
+          
+          <label for="student">I'M A STUDENT
+            <input
+              name="role"
+              type="radio"
+              id="student"
+              ng-model="$ctrl.role"
+              value="student"
+            />
+            <div class="checked"></div>
+            <span class="checkmark"></span>
+          </label>
+          <div class="main__form__column main__form__search-container">
+            <button class="button button--large button--uppercase">Search</button>
+          </div>
+        </div>
+      </form>
+      <img src="../../assets/img/detail.png" alt="Detail">
+    </div>
+  </main>
+</div>

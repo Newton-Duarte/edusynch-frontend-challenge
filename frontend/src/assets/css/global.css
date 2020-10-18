@@ -1,0 +1,113 @@
+:root {
+  font-size: 60%;
+  --color-background: #200E64;
+  --color-primary-lighter: #9871F5;
+  --color-primary-light: #916BEA;
+  --color-primary: #7A57FD;
+  --color-primary-dark: #6135D7;
+  --color-primary-darker: #6842C2;
+  --color-secundary: #FFD74F;
+  --color-secundary-dark: #FFC700;
+  --color-text-title: #32264D;
+  --color-text-base: #FFF;
+} 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  background-color: var(--color-background);
+}
+
+html, body, #root {
+  height: 100vh;
+}
+
+body {
+  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 500 1.6rem 'Open Sans';
+  color: var(--color-text-base);
+}
+
+.container {
+  width: 100vw;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.button {
+  display: inline-block;
+  width: 165px;
+  height: 48px;
+  background: var(--color-secundary);
+  border: 1px solid var(--color-secundary);
+  border-radius: 4px;
+  color: #6F48EC;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  transition: background-color .2s;
+}
+
+.button--small {
+  width: 132px;
+  height: 48px;
+}
+
+.button--large {
+  width: 209px;
+  height: 56px;
+}
+
+.button--icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+.button--uppercase {
+  text-transform: uppercase;
+}
+
+.button:active {
+  background-color: var(--color-secundary-dark);
+}
+
+@media (min-width: 700px) {
+  :root {
+    font-size: 62.5%;
+  }
+}

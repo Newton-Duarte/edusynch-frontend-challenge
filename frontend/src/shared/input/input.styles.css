@@ -1,0 +1,58 @@
+/* Input */
+
+.input-block {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.input-block label {
+  display: block;
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+.input-block input {
+  width: 100%;
+  height: 5.6rem;
+  border-radius: .4rem;
+  background: transparent;
+  background-color: rgba(255, 255, 255, .1);
+  border: 1px inset var(--color-text-base);
+  outline: 0;
+  padding: 0 1.6rem;
+}
+
+.input-block input::placeholder {
+  color: #fff;
+}
+
+.input-block img {
+  position: absolute;
+}
+
+.icon {
+  right: 40px;
+  padding: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .input-block {
+    margin-bottom: 16px;
+  }
+
+  .input-block label {
+    font-size: 14px;
+  }
+
+  .input-block input {
+    height: 48px;
+  }
+
+  .icon {
+    right: 25px;
+    padding: 12px;
+    cursor: pointer;
+  }
+}

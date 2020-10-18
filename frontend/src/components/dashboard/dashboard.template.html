@@ -1,0 +1,87 @@
+<header class="dashboard__header">
+  <img class="dashboard__detail" src="../../assets/img/detail2.png" alt="Detail">
+  <div class="dashboard__header__container">
+    <div class="dashboard__logo">
+      <img src="../../assets/img/logo.svg" alt="Eduick">
+    </div>
+    <nav class="dashboard__nav">
+      <ul class="menu">
+        <a href="#" class="menu__item">
+          <li>My Classes</li>
+        </a>
+      </ul>
+      <button class="button">Change to teacher mode</button>
+    </nav>
+    <div class="dashboard__avatar">
+      <button class="button--icon" ng-click="$ctrl.openDropdown()">
+        <img
+          src="../../assets/img/chevron_down.png"
+          alt="Chevron icon"
+          ng-show="!$ctrl.dropdown"
+        >
+        <img
+          src="../../assets/img/chevron_up.png"
+          alt="Chevron icon"
+          ng-show="$ctrl.dropdown"
+        >
+      </button>
+      <a href="#">
+        <img src="../../assets/img/avatar.png" alt="Avatar">
+      </a>
+      <span></span>
+    </div>
+  </div>
+  <div class="dashboard__dropdown" ng-show="$ctrl.dropdown">
+    <a href="#">
+      Change to teacher mode
+      <img src="../../assets/img/short_right.png" alt="Arrow right">
+    </a>
+  </div>
+</header>
+<div id="dashboard" infinite-scroll="$ctrl.getCourses()">
+  <div class="dashboard__container" ng-style="$ctrl.dashboardOpacity">
+    <main class="dashboard__main">
+      <div class="dashboard__details">
+        <img src="../../assets/img/details.png" alt="Detail">
+      </div>
+      <section class="dashboard__content">
+        <h1>Hello <span>Student</span><span>.</span></h1>
+        <p>Whether you are a student trying to find your ideal private language teachers/tutors</p>
+      </section>
+      <div class="dashboard__image">
+        <img src="../../assets/img/image.png" alt="Dashboard image">
+      </div>
+    </main>
+
+    <section class="courses">
+      <a
+        href="#"
+        class="course"
+        ng-repeat="course in $ctrl.courses"
+      >
+        <div class="course__img">
+          <img src="../../assets/img/course-image.png" alt="Course image">
+        </div>
+        <div class="course__detail">
+          <div
+            star-rating
+            rating-value="course.rating"
+            max="5"
+          ></div>
+          <span>{{ course.lessons }} Lessons</span>
+        </div>
+        <div class="course__title">
+          <h4>{{ course.title }}</h4>
+        </div>
+      </a>
+    </section>
+    <div class="loading" ng-show="$ctrl.loading">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <footer>
+    <p>Copyright &copy; 2020 <strong>Eduick</strong>.<span> Todos os direitos reservados.</span></p>
+  </footer>
+</div>

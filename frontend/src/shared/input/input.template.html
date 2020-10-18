@@ -1,0 +1,15 @@
+<div class="input-block">
+  <label ng-if="$ctrl.label">{{ $ctrl.label }}</label>
+  <img
+    ng-if="($ctrl.type === 'password') || ($ctrl.showPassword && $ctrl.type === 'text')"
+    src="../../assets/img/icon-eye.png" alt="Icon eye"
+    class="icon"
+    ng-click="$ctrl.handleShowPassword()"
+  >
+  <input
+    type="{{ $ctrl.type || 'text' }}"
+    placeholder="{{ $ctrl.placeholder }}"
+    ng-model="$ctrl.fieldValue"
+    ng-change="$ctrl.onChange()"
+  >
+</div>
