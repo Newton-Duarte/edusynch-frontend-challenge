@@ -10,7 +10,7 @@ Este desafio consiste no desenvolvimento da interface de uma landing e uma dashb
 
 ### Start do projeto
 
-1. Clone o projeto: `git clone <link>`
+1. Clone o projeto: `git clone https://github.com/Newton-Duarte/edusynch-frontend-challenge.git`
 2. Entre na pasta do projeto: `cd edusynch-frontend-challenge`
 3. Instale as dependências do projeto:
 3.1 Backend: `cd backend`
@@ -29,9 +29,9 @@ O projeto possui scripts para facilitar o start das aplicações:
     - O script __dev:server__ inicia um servidor em Express.js no endereço: `http://localhost:3333`.
     - O servidor possui apenas uma rota `http://localhost:3333/courses` para servir de dados fictícios para o frontend.
 - Frontend
-  - __build__: `npm run build`
+  - __build__: `yarn build` ou `npm run build`
     - O script __build__ converte o projeto para produção em uma pasta __./dist__
-  - __start__: `npm start`
+  - __start__: `yarn start` ou `npm start`
     - O script __start__ inicia um servidor de desenvolvimento com webpack no endereço: `http://localhost:8080`
 
 
