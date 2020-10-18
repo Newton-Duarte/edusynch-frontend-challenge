@@ -13,10 +13,10 @@ Este desafio consiste no desenvolvimento da interface de uma landing e uma dashb
 1. Clone o projeto: `git clone https://github.com/Newton-Duarte/edusynch-frontend-challenge.git`
 2. Entre na pasta do projeto: `cd edusynch-frontend-challenge`
 3. Instale as dependências do projeto:
-3.1 Backend: `cd backend`
-3.1.1 Dentro da pasta backend rode: `yarn` ou `npm install`
-3.2 Frontend: `cd frontend` (Primeiro volte para pasta raiz ou `cd ../frontend`)
-3.2.1 Dentro da pasta frontend rode: `yarn` ou `npm install`
+4. Backend: `cd backend`
+5. Dentro da pasta backend rode: `yarn` ou `npm install`
+6. Frontend: `cd frontend` (Primeiro volte para pasta raiz ou `cd ../frontend`)
+7. Dentro da pasta frontend rode: `yarn` ou `npm install`
 
 ##### Scripts
 
