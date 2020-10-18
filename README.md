@@ -38,6 +38,5 @@ O projeto possui scripts para facilitar o start das aplicações:
 ##### Descrição
 
 A aplicação frontend possui duas páginas: __landing__ e __dashboard__.
-
-A landing é a primeira página acessando o endereço: `http://localhost:8080`
-A dashboard é a segunda página acessando o endereço: `http://localhost:8080/dashboard`
+A landing é a primeira página acessando o endereço: `http://localhost:8080`.
+A dashboard é a segunda página acessando o endereço: `http://localhost:8080/dashboard`.
